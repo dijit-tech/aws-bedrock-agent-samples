@@ -70,3 +70,16 @@ Compiles all onboarding information into a comprehensive onboarding package.
 Saves the onboarding package and a manager's checklist in the agent store.
 License
 This project is licensed under the Apache-2.0 License.
+
+The code was generated using Copilot. Below are the prompts:
+```
+The agents.yaml file gives details of vairous agents involved in a multi agent collaboration for a startup advisor agent. Based on these agents come up with a new agents.yaml file for a multi agent collaboration for an HR onboarding agent for a new hire. Come up with what agents would be requried for the workflow including "welcome agent", "facilities access agent", "tech assets provisioning agent","daily activities generation agent". The daily activities generation agent will look up role descritions by searching the internet and come up with a sample daily tasks for the new hire. Make appropriate assumptions for rest of the agents
+```
+
+```
+Based on the agents.yaml modify the main.py to create appropriate agents
+```
+
+```
+update the tasks.yaml based on the agents.yaml and main.py. be as descriptive as possible
+```
