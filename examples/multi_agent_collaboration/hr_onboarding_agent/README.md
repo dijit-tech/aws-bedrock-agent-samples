@@ -26,7 +26,7 @@ python3 -m venv .venv
 
 source .venv/bin/activate
 
-pip3 install -r [requirements.txt](http://_vscodecontentref_/1)
+pip3 install -r requirements.txt
 ```
 
 1. Deploy HR Onboarding Agents
@@ -36,13 +36,14 @@ python3 main.py --recreate_agents "true"
 ```
 
 2. Invoke the HR onboarding process
-
+``` python
 python3 main.py \
 --recreate_agents "false" \
 --employee_name "John Smith" \
 --job_title "Data Scientist" \
 --department "Data Analytics" \
 --start_date "2025-06-01"
+```
 
 Tasks Overview
 The HR Onboarding Agent performs the following tasks:
