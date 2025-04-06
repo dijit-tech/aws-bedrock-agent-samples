@@ -161,8 +161,8 @@ def process_orchestration_trace(event, agentClient, step):
 
 def invoke_agent(input_text, session_id, task_yaml_content):
     """Main agent invocation and response processing."""
-    client = boto3.client('bedrock-agent-runtime', region="us-east-1")
-    agentClient = boto3.client('bedrock-agent', region="us-east-1")
+    client = boto3.client('bedrock-agent-runtime', region_name="us-east-1")
+    agentClient = boto3.client('bedrock-agent', region_name="us-east-1")
     
     # Process tasks if any
     _tasks = []

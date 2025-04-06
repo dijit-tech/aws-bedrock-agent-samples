@@ -65,9 +65,8 @@ def main():
     - Onboarding completion
     1. Please enter your name, job title, department, and start date to begin.
     2. The agent will guide you through the onboarding process.
-    3. If you have any questions, feel free to ask!
-    4. Enjoy your onboarding experience!
-    5. If you want to start over, please refresh the page.
+    3. Enjoy your onboarding experience!
+    4. If you want to start over, please refresh the page.
     """)
 
 

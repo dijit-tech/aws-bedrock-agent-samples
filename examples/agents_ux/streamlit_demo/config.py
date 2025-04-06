@@ -50,7 +50,7 @@ bot_configs = [
     },
         {
         "bot_name": "Employee Onboarding",
-        "agent_name": "hr_onoarding_agent",
+        "agent_name": "onboarding_supervisor",
         "start_prompt": "Welcome to the company! Let's get you started with your onboarding process. Please provide your Full Name, Job Title, Department, and Start Date.",
     }
 ]
