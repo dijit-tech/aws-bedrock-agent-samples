@@ -2,7 +2,6 @@
 
 The HR Onboarding Agent streamlines the onboarding process for new employees by automating tasks such as sending welcome emails, arranging facilities access, provisioning technology assets, and generating daily activity guides. It uses a set of sub-agents to ensure a smooth and efficient onboarding experience.
 
-![architecture](/images/architecture.gif)
 
 ## Features
 
@@ -28,10 +27,13 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 pip3 install -r [requirements.txt](http://_vscodecontentref_/1)
+```
 
 1. Deploy HR Onboarding Agents
 
+``` python
 python3 main.py --recreate_agents "true"
+```
 
 2. Invoke the HR onboarding process
 
