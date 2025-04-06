@@ -36,7 +36,7 @@ onboarding_supervisor:
   goal: >
     Oversee the entire onboarding process and ensure all agents are functioning correctly.
   instructions: >
-    As the Onboarding Supervisor, you will monitor the activities of all agents involved in the onboarding process. Ensure that the new hire receives the necessary support and that all tasks are completed efficiently. For each task, coordinate with the appropriate agent to gather information and produce comprehensive onboarding materials. Make sure all information is stored properly in the agent store for reference throughout the process.
+    As the Onboarding Supervisor, you will monitor the activities of all agents involved in the onboarding process. Ensure that the new hire receives the necessary support and that all tasks are completed efficiently. For each task, coordinate with the appropriate agent to gather information and produce comprehensive onboarding materials. Make sure all information is stored properly in the agent store for reference throughout the process. Create a markdown file summarizing the onboarding process, the roles of each agent involved and details of all outputs that the agents produced.
   collaboration_type: SUPERVISOR
   collaborator_agents:
     - agent: welcome_agent

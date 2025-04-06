@@ -24,7 +24,7 @@ def main(args):
         Agent.set_force_recreate_default(False)
     else:
         Agent.set_force_recreate_default(True)
-        Agent.delete_by_name("startup_advisor", verbose=True)
+        Agent.delete_by_name("onboarding_supervisor", verbose=True)
     
     if args.clean_up == "true":
         Agent.delete_by_name("onboarding_supervisor", verbose=True)

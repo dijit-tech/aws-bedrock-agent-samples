@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent.parent.parent))
+sys.path.append("/home/anand/code/agents/amazon-bedrock-agent-samples/")
 
 from src.utils.bedrock_agent import agents_helper
 from config import bot_configs
@@ -28,7 +29,7 @@ def initialize_session():
                 continue
 
         # Get bot configuration
-        bot_name = os.environ.get('BOT_NAME', 'Mortgages Assistant')
+        bot_name = os.environ.get('BOT_NAME', 'Employee Onboarding')
         bot_config = next((config for config in bot_configs if config['bot_name'] == bot_name), None)
         
         if bot_config:
@@ -51,6 +52,24 @@ def main():
 
     # Display chat interface
     st.title(st.session_state['bot_config']['bot_name'])
+
+
+    # Add an overview note about the HR onboarding agent
+    st.markdown("""
+    **Welcome to the HR Onboarding Agent!**  
+    This agent is designed to assist with employee onboarding tasks such as:
+    - Welcome messages
+    - Facilities access
+    - Tech assets provisioning
+    - Daily activities generation
+    - Onboarding completion
+    1. Please enter your name, job title, department, and start date to begin.
+    2. The agent will guide you through the onboarding process.
+    3. If you have any questions, feel free to ask!
+    4. Enjoy your onboarding experience!
+    5. If you want to start over, please refresh the page.
+    """)
+
 
     # Show message history
     for message in st.session_state.messages:

@@ -47,5 +47,10 @@ bot_configs = [
                 "todays_date": datetime.datetime.now().strftime("%Y-%m-%d")
             }
         }
+    },
+        {
+        "bot_name": "Employee Onboarding",
+        "agent_name": "hr_onoarding_agent",
+        "start_prompt": "Welcome to the company! Let's get you started with your onboarding process. Please provide your Full Name, Job Title, Department, and Start Date.",
     }
 ]

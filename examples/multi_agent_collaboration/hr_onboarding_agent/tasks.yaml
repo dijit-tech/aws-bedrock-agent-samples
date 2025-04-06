@@ -90,3 +90,5 @@ onboarding_completion_task:
     7. Additional recommendations for smooth integration into the team and company culture
     Save the complete onboarding package as JSON in the agent store with key 'complete_onboarding_package'.
     Also save a simplified onboarding checklist for the manager with key 'manager_onboarding_checklist'.
+    Prepare a markdown file summarizing the onboarding process, the roles of each agent involved,
+    and details of all outputs that the agents produced. Show the output on the screen in markdown format.
