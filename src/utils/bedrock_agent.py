@@ -39,14 +39,14 @@ import json
 print(f"boto3 version: {boto3.__version__}")
 
 # Clients
-s3_client = boto3.client("s3")
-sts_client = boto3.client("sts")
-bedrock_agent_client = boto3.client("bedrock-agent")
-bedrock_agent_runtime_client = boto3.client("bedrock-agent-runtime")
-bedrock_client = boto3.client("bedrock")
+s3_client = boto3.client("s3", region_name='us-east-1')
+sts_client = boto3.client("sts", region_name='us-east-1')
+bedrock_agent_client = boto3.client("bedrock-agent", region_name='us-east-1')
+bedrock_agent_runtime_client = boto3.client("bedrock-agent-runtime", region_name='us-east-1')
+bedrock_client = boto3.client("bedrock", region_name='us-east-1')
 agents_helper = AgentsForAmazonBedrock()
 
-region = agents_helper.get_region()
+region = 'us-east-1' # agents_helper.get_region()
 account_id = sts_client.get_caller_identity()["Account"]
 
 suffix = f"{region}-{account_id}"

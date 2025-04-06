@@ -131,21 +131,21 @@ class AgentsForAmazonBedrock:
         """Constructs an instance."""
         self._boto_session = Session()
         self._region = self._boto_session.region_name
-        self._account_id = boto3.client("sts").get_caller_identity()["Account"]
+        self._account_id = boto3.client("sts", region_name='us-east-1').get_caller_identity()["Account"]
 
-        self._bedrock_agent_client = boto3.client("bedrock-agent")
+        self._bedrock_agent_client = boto3.client("bedrock-agent", region_name='us-east-1')
 
         long_invoke_time_config = Config(read_timeout=600)
         self._bedrock_agent_runtime_client = boto3.client(
-            "bedrock-agent-runtime", config=long_invoke_time_config
+            "bedrock-agent-runtime", config=long_invoke_time_config, region_name='us-east-1'
         )
 
-        self._sts_client = boto3.client("sts")
-        self._iam_client = boto3.client("iam")
-        self._lambda_client = boto3.client("lambda")
-        self._s3_client = boto3.client("s3", region_name=self._region)
-        self._dynamodb_client = boto3.client("dynamodb", region_name=self._region)
-        self._dynamodb_resource = boto3.resource("dynamodb", region_name=self._region)
+        self._sts_client = boto3.client("sts", region_name='us-east-1')
+        self._iam_client = boto3.client("iam", region_name='us-east-1')
+        self._lambda_client = boto3.client("lambda", region_name='us-east-1')
+        self._s3_client = boto3.client("s3", region_name='us-east-1')
+        self._dynamodb_client = boto3.client("dynamodb", region_name='us-east-1')
+        self._dynamodb_resource = boto3.resource("dynamodb", region_name='us-east-1')
 
         self._suffix = f"{self._region}-{self._account_id}"
 
