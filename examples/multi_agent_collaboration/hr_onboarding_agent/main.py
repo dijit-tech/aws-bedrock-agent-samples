@@ -32,7 +32,7 @@ def main(args):
         Agent.delete_by_name("facilities_access_agent", verbose=True)
         Agent.delete_by_name("tech_assets_provisioning_agent", verbose=True)
         Agent.delete_by_name("daily_activities_generation_agent", verbose=True)
-        
+        exit()
     else:
         inputs = {
             'employee_name': args.employee_name,
